@@ -60,12 +60,12 @@ jobs:
       - uses: actions/checkout@v3
         name: changing the deployment of git repo
         with:
-          repository: 'tanmaybhandge/App-Manifest-'
+          repository: 'Solarge/cicd-eks-gha'
           token: ${{ secrets.GIT_PASSWORD }}
       - name: modify the image
         run: |
-          git config user.email tanmay8928@gmail.com
-          git config user.name Tanmay
+          git config user.email adedeji.solaja@yahoo.com
+          git config user.name solarge
           pwd
           cat deployment.yaml
           pwd
