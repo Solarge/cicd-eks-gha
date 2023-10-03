@@ -1,10 +1,11 @@
-# Python file (app.py)
-from flask import Flask
+from flask import Flask  # Ensure you have correct casing here
+
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return '''
+@app.route("/")
+def home():
+    return "Hello, Flask!"
+'''
 <html>
 <body>
 <center>
