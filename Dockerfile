@@ -6,8 +6,9 @@ WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-RUN pip3 uninstall Flask
-RUN pip3 install Flask
+RUN pip3 show Flask && pip3 uninstall -y Flask || echo "Flask is not installed"
+RUN pip3 uninstall Flask -y
+RUN pip3 install Flask -y
 
 COPY . .
 
